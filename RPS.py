@@ -10,21 +10,41 @@ def main():
   losses = 0
   #Create a loop that continues as long as the user wants to play.
   #User can play as many games as they wish.
+  play = "Y"
+  while play == "Y":
 
   #Randomly choose the computer between 'R', 'P', or 'S'
   #Prompt the user for their RPS selection
   #Determine winner and state what happened to the user
   #Ask the user if they would like to play again.
   
-  player = input("Enter choice (R/P/S): ")
+    player = input("Enter choice (R/P/S): ")
 
-  computer = random.choice( ["R","P","S"])
+    computer = random.choice( ["R","P","S"])
 
-  if player == computer:
-    print("TIE")
-    ties = ties + 1
+    if player == computer:
+      print("TIE")
+      ties = ties + 1
+    elif player == "R" and computer == "S":
+      print("You Win!")
+      wins = wins + 1
+    elif player == "R" and computer == "P":
+      print("You lose")
+      losses = losses + 1
+    elif player == "S" and computer == "R":
+      print("You lose")
+      losses = losses + 1
+    elif player == "S" and computer == "P":
+      print("You Win!")
+      wins = wins + 1
+    elif player == "P" and computer == "R":
+      print("You Win!")
+      wins = wins + 1
+    elif player == "P" and computer == "S":
+      print("You lose")
+      losses = losses + 1
 
-
+    play = input("Play angain? (Y/N): ")
 
   #In the end, print the stats
   print("Wins \t Ties \t Losses")
