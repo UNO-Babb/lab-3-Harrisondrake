@@ -11,8 +11,8 @@ def main():
   tempF = input("Enter a farenheit temperature")
   tempF = int(tempF)
   tempC = (tempF - 32) / 1.8
-  number = tempC
-  rounded_number = round(number, 1)
+  num = tempC
+  rounded_number = round(num, 1)
 
   print(tempF, "is ", rounded_number, "degrees celsius.")
 if __name__ == '__main__':
