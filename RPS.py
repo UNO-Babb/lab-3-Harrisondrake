@@ -22,6 +22,13 @@ def main():
 
     computer = random.choice( ["R","P","S"])
 
+    if computer == "R":
+      print("Computer chose Rock")
+    elif computer == "P":
+      print("Computer chose Paper")
+    elif computer == "S":
+      print("Computer chose Scissors")
+
     if player == computer:
       print("TIE")
       ties = ties + 1
