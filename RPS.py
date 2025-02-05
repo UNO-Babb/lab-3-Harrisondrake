@@ -15,6 +15,16 @@ def main():
   #Prompt the user for their RPS selection
   #Determine winner and state what happened to the user
   #Ask the user if they would like to play again.
+  
+  player = input("Enter choice (R/P/S): ")
+
+  computer = random.choice( ["R","P","S"])
+
+  if player == computer:
+    print("TIE")
+    ties = ties + 1
+
+
 
   #In the end, print the stats
   print("Wins \t Ties \t Losses")
